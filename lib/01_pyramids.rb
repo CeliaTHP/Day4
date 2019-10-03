@@ -50,5 +50,37 @@ until x == 0
 end
 end
 end
+def wtfpyramid
+            puts "Salut, bienvenue dans ma super pyramide ! Combien d'étages veux-tu ?"
+     print " > "
+     nb = gets.chomp.to_i
+     while nb % 2 == 0
+        puts "pas de nombre pair"
+        puts "veuillez inserer un nombre impair"
+     print "> "
+     nb = gets.chomp.to_i
+     end
+     nb = (nb/2)
+end
+def full_pyramide(wtfpyramid)
+    i = 1
+    j = 0
+    n = wtfpyramid
+     
+     for i in (i..n)
+         print " "*n
+         puts "#"*(i+j)
+         j+=1
+         n-=1
+    end
+    n = n+2
+    k=0
+    for n in (n..i)
+         print " "*n
+         puts "#"*(i+(i-3)-k)
+         k+=2
+    end
+end
+full_pyramide(wtfpyramid)	
 
 wtf_pyramid
